@@ -65,15 +65,13 @@ class RestaurantTest {
         List<String> selectedItems = new ArrayList<String>();
         selectedItems.add("Sweet corn soup");
         selectedItems.add("Vegetable lasagne");
-        int expectedOrderPrice = restaurant.calculateOrderPrice(selectedItems);
-        assertEquals(269,expectedOrderPrice);
+        assertEquals(269,restaurant.calculateOrderPrice(selectedItems));
     }
 
     @Test
     public void when_not_selecting_items_order_price_should_be_0(){
         List<String> selectedItems = new ArrayList<String>();
-        int expectedOrderPrice = restaurant.calculateOrderPrice(selectedItems);
-        assertEquals(0,expectedOrderPrice);
+        assertEquals(0,restaurant.calculateOrderPrice(selectedItems));
     }
 
 }

@@ -66,4 +66,12 @@ public class Restaurant {
         return name;
     }
 
+    public int calculateOrderPrice(List<String> selectedMenuItems){
+        for(String selectedMenuItem : selectedMenuItems){
+           Item item = findItemByName(selectedMenuItem);
+           orderPrice = Integer.parseInt(item.toString().substring(item.toString().indexOf(':')+1,item.toString().length()-1));
+        }
+        return orderPrice;
+    }
+
 }
